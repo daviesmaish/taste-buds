@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMART RESTRAUNT</title>
+    <link rel="stylesheet" href="icons/">
+</head>
+
+<style>
+    *{
+        position: relative;
+    }
+    ::after,::before{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        
+        
+    }
+    body html{ width: 75%; height: 100% ;overflow: hidden; margin-left: 20px;}
+            body{
+                background-color:hsl(180, 94%, 50%);line-height: 1.75;
+                color: var();
+    
+        
+    }
+    .nav{
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 30px 0;
+        margin-right: 20px;
+    }
+    .nav .logo{
+        font-weight: 600;
+        font-family: sans-serif;
+        color: #000000;
+    }
+    .nav .logo b{
+         color: #ff511c;
+
+    }
+    .nav ul{
+        display: flex;
+        list-style: none;
+        flex-wrap: wrap;
+        
+
+    }
+    .nav ul li{
+        margin-right: 30px;
+    }
+    .nav ul li a{
+        text-decoration: none;
+        color: rgb(12, 12, 252);
+        font-weight: 500;
+        font-family: sans-serif;
+        font-size: 20px;
+        
+    }
+
+    .nav ul .active::after::after{
+        content:'' ;
+        width: 50%;
+        height: 3px;
+        background-color: #ff511c;
+        display: flex;
+        position: relative;
+        margin-left: 10px;
+
+    }
+    
+    /*=====CONTENT====*/
+    .content{
+        display: grid;
+        grid-template-columns: 50% auto;
+        gap: 30px;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+    /*#Content TEXT*/
+    /*=====LEFT-SIDE===*/
+    .content .content-left{
+        display: block;
+        width: 100%;
+
+    }
+    .content .content-left .info{
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+
+    }
+    .content .content-left .info h2{
+        font-size: 60px;
+        font-family: sans-serif;
+        margin-bottom: 30px;
+    }
+    .content .content-left .info p{
+        font-size: 20px;
+        line-height: 2pc;
+        margin-bottom: 30px;
+        font-family: sans-serif;
+    }
+    /*#Content*/
+    /*====BUTTON===*/
+    .content .content-left button{
+        padding: 10px 23px;
+        background-color: #ff511c;
+        color: #ffffff;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+
+
+    }
+    /*#Content IMAGE */
+    /*====RIGHT-SIDE===*/
+    .content .content-right{
+        display: block;
+        width: 80%;
+
+    }
+    .content .content-right img{
+        width: 120px;
+        height: auto;
+        margin-right: 40px;
+        
+        position: relative;
+        user-select: none;
+        animation: rotate 10s linear infinite;
+    
+        
+    }
+    /*# CONTENT */
+    /*=====ANIMATION====*/
+    @keyframes rotate {
+        0%{
+            transform: rotate(0deg);
+        }
+        100%{
+            transform: rotate(360deg);
+        }
+    }
+    /*=====CARDS=====*/
+    .category{
+        width:100%;
+        display: flex;
+        margin-bottom: 50px;
+        justify-content: center;
+    }
+    .category .list-items{
+        width: 90%;
+        position: relative;
+    }
+    .category .list-items h3{
+        font-size: 20px;
+        font-weight: 600;
+        font-family: sans-serif;
+        margin-bottom: 70px;
+    }
+    .category .list-items .card-list{
+        display: flex;
+        grid-template-columns: repeat(4,1fr);
+
+    }
+    .category .card-list .card{
+        width: 200px;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 10px;
+        outline: 2px solid #faad96;
+        border-radius: 10px;
+        position: relative;
+        background-color: #ffffff;
+        
+    }
+    .category .card-list .card img{
+        width: 100px;
+        height: auto;
+        bottom: 140px;
+        left: 50px;
+        object-fit: cover;
+        object-position: center;
+        background-repeat: no-repeat;
+        position: absolute;
+        box-shadow: 0 20px 20px #faad96;
+        border-radius: 50%;
+        
+    }
+    .category .card-list .card .food-title{
+        padding: 40px 0 10px;
+    }
+    .category .card-list .card h1{
+        text-align: center;
+        font-weight: bold;
+        font-size: 16px;
+        font-family: sans-serif;
+    }
+    .category .card-list .card p{
+        font-size: 13px;
+        text-align: center;
+        font-weight: 500;
+        font-family: sans-serif;
+        margin-bottom: 20px;
+
+    }
+    /*====FORM===*/
+    #myForm{
+    max-width: 50px;
+    margin: auto;
+
+}
+   /*====FORM LABEL===*/
+   label{
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+
+   }
+   input[type = "text"],
+   input[type ="email"],
+   textarea{
+    display: block;
+    width: 55%;
+    padding: 10px;
+    border: 2px solid #0000ff;
+    border-radius: 3px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    font-size: 16px;}
+   input [type= "submit"]{
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 3px;
+    cursor: pointer;
+   }
+   
+    
+</style>
+<body>
+    <h1>
+    WELCOME!!
+    </h1>
+    <h6></h6>
+
+    <style>
+    h6 {
+        background-image: url("Food images/Image 4.png.jpg ");
+        background-size: 100%;
+        background-repeat: no-repeat; background-position: center;
+        height: 250px;
+        width:300px;
+            box-shadow: 0 5px 10px #06ffff; 
+            animation: rotate 10s linear infinite;
+            
+        }
+    </style>
+
+    <section class="main">
+        <div class="nav">
+            <div class="logo"><h1>SMART <b> RESTAURANT</b></h1>
+               
+            
+            </div>
+
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#service">Service</a></li>
+                <li><a href="#about us">About us</a></li>
+                <li><a href="#Order form">Order form</a></li>
+                <li><a href="#web developer">Developer</a></li>
+            </ul>
+           
+        </div>
+    </section>
+    <section class="grid">
+        <div class="content">
+            <div class="content-left">
+                <div class="info">
+                    <h3>Order Your Best
+                        <br>
+                        Food anytime
+                    </h3>
+                    <p>
+                        Hey,Our delicious food is waiting for you,<br>
+                        we are always near to you with fresh item of food
+                    </p>
+                </div>
+                <button>Explore food</button>
+            </div>
+            <div class="content-right">
+                <img src="Food images/Image 2.png.jpg">
+            </div>
+        </div>
+    </section> 
+    <section class="category">
+        <div class="list-items">
+            <h3>
+                Popular Dishes
+            </h3>
+            <div class="card-list">
+                <div class="card">
+                    <img src="Food images/beef burger.png.jpg">
+                    <div class="food-title">
+                         <h1>Beef Burger</h1>
+                        
+                       
+                    </div>
+                    <div class="desc-food">
+                        <p></p>
+                    </div>
+                    <div class="price">
+                        <span>$10.79</span>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <h1>
+                        Rice
+                    </h1>
+                    <img src="Food images/rice image.png.jpg">
+                    <div class="price">
+                        <span>
+                            $10.88
+                        </span>
+                    </div>
+                </div>
+                <div class="card">
+                    <h1>
+                        Fried chicken
+                    </h1>
+                    <img src="Food images/fried chicken.png.jpg">
+                    <div class="price">
+                        <span>
+                            $10
+                        </span>
+                    </div>
+                </div>
+                <div class="card">
+                    <h1>
+                        French fries
+                    </h1>
+                    <img src="Food images/French fries.png.jpg">
+                    <div class="price">
+                        <span>
+                            $5.8
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>   
+    <div id="home">
+        <h1>
+            Home
+        </h1>
+Welcome to  Smart Restaurant  where culinary excellence meets warm hospitality. 
+Our restaurant is a haven for food enthusiasts seeking an unforgettable dining experience. 
+From the moment you step through our doors, you'll be greeted by an inviting ambiance that combines modern elegance with a touch of 
+rustic charm. Our dedicated team of chefs, known for their passion and creativity, craft each dish with the finest ingredients, 
+ensuring a symphony of flavors that dance on your palate. Whether you're here for a romantic dinner, a family celebration, or a casual 
+get-together with friends, our diverse menu offers a tantalizing array of options to cater to every palate. From our signature dishes 
+to a curated selection of wines and craft cocktails, every detail is designed to create moments of culinary delight. At
+Smart restauranat, we take pride in not just serving meals but crafting memories.
+Join us on a gastronomic journey that celebrates the art of dining.
+
+    </div>
+    <div id="menu">
+      <h1>
+        Menu
+      </h1>
+     
+At Smart Restaurant , we believe that great food is a journey of flavors and a reflection of artistry. 
+Our menu is a testament to this philosophy, carefully curated to excite your taste buds and satisfy your 
+culinary desires. From our appetizers that tease your palate with tantalizing bites to our main courses that
+celebrate the essence of each ingredient, every dish is a masterpiece. We source only the freshest and highest
+quality ingredients to create a symphony of tastes, whether you're savoring our classic favorites like the 
+mouthwatering Beef Burger Meal or exploring our chef's innovative creations. Our commitment to excellence 
+extends beyond taste; we prioritize presentation, ensuring that each plate is a work of art that pleases the
+eyes as much as it does the palate. 
+
+    </div>
+    <div id="service">
+        <h1>
+            Service
+        </h1>
+        At Smart Restaurant, we are committed to providing you with exceptional dining experience
+        from the moment you walk through our doors.Our dedicated and attentive
+        staff is here to ensure your every need is met,whether its assisting
+        you in selecting the perfect dish or accommodating special dietry preferences.We take
+        pride in delivering prompt and courteous service, allowing you to relax and savor each
+        moment with family and friends.Our goal is to create an atmosphere where you
+        feel at home, whether you are celebrating or simply enjoying
+        a casual meal.If you have any questons or requests, please dont hesitate 
+        to ask;your satisfaction is our priority.We look forward
+        to serve you and making your time with us truly memomarable.
+
+    </div>
+    <div id="about us">
+        <h1>
+            About us
+        </h1>
+       
+At Smart Restaurant , our story is one of passion and dedication to the art of hospitality and culinary excellence. 
+Founded by a team of food enthusiasts and experienced chefs, our restaurant embodies a commitment to quality, creativity, and a love
+for bringing people together over exceptional food. Our journey began with a vision to create a welcoming space where every guest could 
+experience the joy of a memorable meal. Over the years, we've honed our craft, constantly striving to exceed expectations and push the bounderies 
+of flavor. We take pride in our roots in As we continue to evolve and innovate, our mission remains the same: to provide you with an unparalleled
+dining experience that leaves you with not just a full stomach but a heartwarming memory. Thank you for choosing 
+Smart Restaurant , and we look forward to serving you for many years to come."
+
+    </div>
+    <div id="Order form">
+        <h1>
+            Customer's Order form
+        </h1>
+        <form name="myForm" onsubmit="return validateForm()"> 
+                    
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name"><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email"><br>
+            <label for="meal">Meal:</label>
+            <textarea  id="meal" name="meal"></textarea>
+            <label for="country"> country:</label>
+            <select  id="country" name="country">
+                <option value="">--select country--</option>
+                <option value="Algeria">Algeria</option>
+                <option value="Angola" >Angola</option>
+                <option value="Benin">Benin</option>
+                <option value="Botswana">Botswana</option>
+                <option value="Burkina Faso">Burkina Faso</option>
+                <option value="Burundi">Burundi</option>
+                <option value="Cape Verde">Cape Verde</option>
+                <option value="Cameroon">Cameroon</option>
+                <option value="Central African Republic">Central African Republic</option>
+                <option value="Chad">Chad</option>
+                <option value="Comoros">Comoros</option>
+               <option value ="Democratic Republic of congo">Democratic Republic of congo</option>
+                <option value="Republic of Congo">Republic of Congo</option>
+                <option value="Cote d'Ivore">Cote d'Ivore</option>
+                <option value= "Djibout">Djibout</option>
+                <option value="Egypt">Egypt</option>
+                <option value="Equitorial Guinea">Equitorial Guinea</option>
+                <option value="Eriteria">Eriteria</option>
+                <option value="Eswatini">Eswatini</option>
+                <option value="Ethiopia">Ethiopia</option>
+                <option value="Gabon">Gabon</option>
+                <option value="Gambia">Gambia</option>
+                <option value="Ghana">Ghana</option>
+                <option value="Guinea">Guinea</option>
+                <option value="Guinea Bissau">Guinea Bissau</option>
+                <option value="Kenya">Kenya</option>
+                <option value="Lesotho">Lesotho</option>
+                <option value="Liberia">Liberia</option>
+                <option value="Libya">Libya</option>
+                <option value="Madgascar">Madagascar</option>
+                <option value="Malawi">Malawi</option>
+                <option value="Mali">Mali</option>
+                <option value="Mauritania">Maritania</option>
+                <option value="Mauritius">Mauritius</option>
+                <option value="Morocco">Morocco</option>
+                <option value="Mozambique">Mozambique</option>
+                <option value="Namibia">Namibia</option>
+                <option value="Niger">Niger</option>
+                <option value="Rwanda">Rwanda</option>
+                <option value="Sao Tome and Principle">Sao Tome and Principle </option>
+                <option value="Senegal">Senegal</option>
+                <option value="Seychellus">Seychellus</option>
+                <option value="Sierra Leone">Sierra Leone</option>
+                <option value="Somalia">Somalia</option>
+                <option value="South Africa">South Africa</option>
+                <option value="South Sudan">South Sudan</option>
+                <option value="Sudan">Sudan</option>
+                <option value="Tanzania">Tanzania</option>
+        </select>
+            <input type="submit" value="submit">
+        <script>
+
+function validateForm()
+{
+    var name =document.forms["myForm"]["name"].value;
+    var email = document.forms["myForm"]["email"].value;
+    var meal = document.forms["myForm"]["meal"].value;
+    
+    if (name == ""){
+        alert("Please enter your name");
+        return false;}
+    if(email == ""){
+        alert("Please enter your email");
+        return false;
+    }
+    if(meal == ""){
+        alert("Please enter the meal you are purchasing for");
+        return false;
+    }
+    if(country ==""){
+        alert("Please select a country");
+        return false;
+
+    }
+    
+
+return true;
+}
+
+
+</script>
+</form>
+
+</form>
+
+</div>
+<div id="web developer">
+    <h1>
+        Web Developer:
+        DAVID MACHARIA
+    </h1>
+    <h4></h4>
+
+    <style>
+    h4 {
+        background-image: url("Food images/Engineer.png.jpg");
+        background-size: 80%;
+        background-repeat: no-repeat; background-position: center;
+        height: 250px; background-color: blue;padding: 3px;
+        width:220px;border-radius:50% ; border: 8px solid #f53192;
+            box-shadow: 0 5px 10px #06ffff; 
+        }
+    </style>
+    
+    <p1 style="font-weight: bolder;font-size:medium;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; align-items: center;justify-content: center;
+    width: 100%;">
+        David is a committed,hardworking and diligent frontend web developer and a student at Moi University ;School of Engineering.He takes
+        Bachelors of Engineering in Electrical and Electronics Engineering and also passionate in software Engineering.
+    </p1>
+</div>
+</body>
+</html>
